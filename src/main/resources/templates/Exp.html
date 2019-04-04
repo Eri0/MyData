@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <script src="/static/jqeury/jquery-3.3.1.js"></script>
+    <script src="/static/js/echarts.js"></script>
+    <script src="/static/js/Ejs.js"></script>
+    <style>
+        button{
+            /*background: url("/images/最小化图标.jpg");*/
+            border: none;
+            background-color: white;
+        }
+        #main{
+            position: absolute;
+            top: 40px;
+            left: 600px;
+
+        }
+        #main1{
+            position: absolute;
+            top: 40px;
+            left: 200px;
+        }
+        #large{
+            width: 1000px;
+            height: 100%;
+        }
+        #button1{
+            position: absolute;
+            top: 10px;
+            left: 200px;
+
+        }
+        #button2{
+            position: absolute;
+            top: 10px;
+            left: 300px;
+
+        }
+    </style>
+    <script>
+        function toggle(btn,id) {
+            document.getElementById(id).style.display = 'none'
+
+        }
+        function toggle1(btn,id) {
+            document.getElementById(id).style.display = 'block'
+
+        }
+    </script>
+</head>
+<body>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="large">
+    <div id="space" style="width: 100px; height:400px;">
+
+    </div>
+    <button id="button1" onclick="toggle(this,'main1')">
+        <img  id="icon1" src="/static/images/小.png" style="height: 22px;width: 70px" >
+    </button>
+    <button id="button2" onclick="toggle1(this,'main1')">
+        <img  id="icon2" src="/static/images/大.png" style="height: 22px;width: 70px" >
+    </button><br/>
+
+    <div id="main" style="width: 400px; height:400px;"></div>
+    <div id="main1" style="width: 400px; height:400px;"></div>
+
+</div>
+</body>
+</html>
